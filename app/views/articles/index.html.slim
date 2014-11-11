@@ -8,3 +8,6 @@ table
     tr
       td = article.title
       td = article.text
+      td = link_to '显示', article_path(article)
+      td = link_to '编辑', edit_article_path(article)
+      td = link_to '删除', article_path(article), method: :delete, data:{confirm: '确定删除？'}
